@@ -6,25 +6,33 @@
   import CTA from '$lib/components/CTA.svelte';
   import { onMount } from 'svelte';
 
-  let markdown = $state(`# Modern App Builder
+  let markdown = $state(`<!--hero-->
+# Modern App Builder
 Experience the future of development with our AI-powered markdown to landing page engine. Build faster, design better.
 * [Get Started](https://v0.app)
 * [Watch Demo](#)
+
 ![Hero Image](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop)
+<!--/hero-->
 
-![Vercel](https://upload.wikimedia.org/wikipedia/commons/5/5e/Vercel_logo_and_wordmark.svg)
-![Nextjs](https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg)
-![Tailwind](https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg)
-![Svelte](https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg)
+<!--logos-->
+* ![Nextjs](https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg)
+* ![Tailwind](https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg)
+* ![Svelte](https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg)
+<!--/logos-->
 
+<!--cards-->
 ## Powerful Features
 * ![Speed](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop) **Lighting Fast** Our engine transforms markdown into optimized HTML in milliseconds. [Learn More](/features)
 * ![Design](https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2340&auto=format&fit=crop) **Customizable Styles** Easily adjust the tailwind theme to match your brand identity. [Explore](/styles)
 * ![SEO](https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2348&auto=format&fit=crop) **SEO Optimized** Automatically generates semantic HTML tags for search engines. [Read Guide](/seo)
+<!--/cards-->
 
+<!--cta-->
 ### Ready to Build?
 Stop wasting hours on boilerplate and start focusing on your content. Our converter handles the rest.
-[Launch Project](https://v0.app)`);
+[Launch Project](https://v0.app)
+<!--/cta-->`);
 
   let components = $derived(parseMarkdownToComponents(markdown));
   let isEditing = $state(true);

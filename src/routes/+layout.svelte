@@ -2,7 +2,6 @@
   import '../app.css';
   import { onMount } from 'svelte';
   import AOS from 'aos';
-  import 'aos/dist/aos.css';
 
   let { children } = $props();
 
