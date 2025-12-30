@@ -54,7 +54,7 @@ jobs:
 
       - name: Build static site
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          BASE_PATH: /${{ github.event.repository.name }}
         run: pnpm build
 
       - name: Upload build artifacts
